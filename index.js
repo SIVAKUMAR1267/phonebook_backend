@@ -1,9 +1,17 @@
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
+<<<<<<< HEAD
 const app = express()
 
 app.use(express.static('dist'))
+=======
+const cors = require('cors')
+const app = express()
+
+app.use(express.static('dist'))
+app.use(cors())
+>>>>>>> 2c001503318cf16b3ed2e10b84ce041a7cbb486e
 app.use(express.json())
 
 morgan.token('body', (req) => {
